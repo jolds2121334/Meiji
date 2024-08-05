@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="admin">
+        <h2>Admin Dashboard</h2>
+        <button id="return-home" class="admin" onclick="location.href='index.html'">Return Home</button>
+    </header>
+    <main>
+        <form id="text-analysis-form">
+            <div class="form-section">
+                <label for="vocab-title">Enter a title for the vocabulary set:</label>
+                <input type="text" id="vocab-title" placeholder="Vocabulary Set Title" required>
+            </div>
+
+            <div class="form-section">
+                <label for="text-input">Enter text to create a vocabulary set:</label>
+                <textarea id="text-input" rows="10" cols="50" required></textarea>
+            </div>
+            
+            <button type="submit" class="admin">Submit</button>
+        </form>
+        <p id="analysis-feedback"></p>
+    </main>
+    <script src="admin_dashboard.js"></script>
+</body>
+</html>

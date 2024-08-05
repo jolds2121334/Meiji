@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Glossary</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="user">
+        <div class="header-top">
+            <p>Designed by Jules Olds</p>
+            <button class="admin-login" onclick="location.href='admin_login.html'">Admin Log In Here</button>
+        </div>
+        <div class="header-center">
+            <img src="logo.png" alt="Corpus Christi College Cambridge Logo">
+            <h1>Corpus Christi College Cambridge - Vocab Builder</h1>
+            <nav class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="glossary.html">Glossary</a>
+                <a href="incorrect.html">Incorrect Answers</a>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <div class="glossary">
+            <h2>Glossary</h2>
+            <ul id="glossary-list">
+                <!-- Words and definitions will be populated here -->
+            </ul>
+        </div>
+    </main>
+    <script>
+        const questions = [
+            { word: "ambiguous", definition: "Open to more than one interpretation; not having one obvious meaning." },
+            { word: "benevolent", definition: "Well meaning and kindly." },
+            { word: "cogent", definition: "Clear, logical, and convincing." },
+            { word: "deliberate", definition: "Done consciously and intentionally." },
+            { word: "eclectic", definition: "Deriving ideas, style, or taste from a broad and diverse range of sources." },
+            { word: "facetious", definition: "Treating serious issues with deliberately inappropriate humor." },
+            { word: "gregarious", definition: "Fond of company; sociable." },
+            { word: "haphazard", definition: "Lacking any obvious principle of organization." },
+            { word: "incongruous", definition: "Not in harmony or keeping with the surroundings or other aspects of something." },
+            { word: "juxtapose", definition: "Place or deal with close together for contrasting effect." }
+        ];
+
+        // Populate the glossary list
+        const glossaryList = document.getElementById("glossary-list");
+        questions.forEach(q => {
+            const listItem = document.createElement("li");
+            listItem.innerHTML = `<strong>${q.word}:</strong> ${q.definition}`;
+            glossaryList.appendChild(listItem);
+        });
+    </script>
+</body>
+</html>

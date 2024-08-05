@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vocab Builder</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="user">
+        <div class="header-top">
+            <p>Designed by Jules Olds</p>
+            <button class="admin-login" onclick="location.href='admin_login.html'">Admin Log In Here</button>
+        </div>
+        <div class="header-center">
+            <img src="logo.png" alt="Corpus Christi College Cambridge Logo">
+            <h1>Corpus Christi College Cambridge - Vocab Builder</h1>
+            <nav class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="glossary.html">Glossary</a>
+                <a href="incorrect.html">Incorrect Answers</a>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <div class="word-test">
+            <button id="reveal-definition" class="user" onclick="toggleDefinition()">Click here to reveal the definition</button>
+            <p><strong>Fill in the blank:</strong> <span id="context">The ending of the story was deliberately __________.</span></p>
+            <div id="options"></div>
+            <input type="text" id="answer" placeholder="Enter your answer">
+            <button id="submit-button" onclick="checkAnswer()" class="user">Submit or Press Enter</button>
+            <p id="feedback"></p>
+            <p id="score">Score: 0/0</p>
+            <p id="percentage" style="display: none;">Percentage: 0%</p> <!-- Initially hidden -->
+        </div>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Login</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="admin">
+        <div class="header-top">
+            <p>Designed by Jules Olds</p>
+            <button class="admin-login" onclick="location.href='index.html'">Home</button>
+        </div>
+        <div class="header-center">
+            <img src="logo.png" alt="Corpus Christi College Cambridge Logo">
+            <h1>Corpus Christi College Cambridge - Admin Login</h1>
+        </div>
+    </header>
+    <main>
+        <div class="login-container">
+            <h2>Admin Login</h2>
+            <form id="login-form">
+                <div class="form-group">
+                    <label for="username">Username</label>
+                    <input type="text" id="username" name="username" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+                <button type="submit" class="admin">Login</button>
+                <p id="login-feedback"></p>
+            </form>
+        </div>
+    </main>
+    <script>
+        document.getElementById('login-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+
+            // Updated login logic with new password
+            if (username === 'admin' && password === 'James') {
+                window.location.href = 'admin_dashboard.html';
+            } else {
+                document.getElementById('login-feedback').textContent = 'Invalid username or password.';
+            }
+        });
+    </script>
+</body>
+</html>
